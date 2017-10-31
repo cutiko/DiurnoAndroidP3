@@ -1,9 +1,9 @@
 package cl.cutiko.coolmeetups.views.main;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,7 +16,6 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import cl.cutiko.coolmeetups.R;
 import cl.cutiko.coolmeetups.adapters.BookListener;
 import cl.cutiko.coolmeetups.adapters.MeetupAdapter;
-import cl.cutiko.coolmeetups.data.Nodes;
 import cl.cutiko.coolmeetups.models.Meetup;
 import cl.cutiko.coolmeetups.views.details.DetailsActivity;
 
@@ -44,8 +43,9 @@ public class MeetupListFragment extends Fragment implements BookListener {
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
         // FIXME: 31-10-17 you have to initialize the firebase options properly
         FirebaseRecyclerOptions<Meetup> options = null;
-        adapter = new MeetupAdapter(options, this);
-        recyclerView.setAdapter(adapter);
+        //TODO initialize this properly
+        //adapter = new MeetupAdapter(options, this);
+        //recyclerView.setAdapter(adapter);
     }
 
     @Override
